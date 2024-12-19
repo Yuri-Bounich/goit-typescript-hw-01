@@ -3,6 +3,7 @@ const username: string = 'Max';
 const toggle: boolean = true;
 const empty: null = null;
 // type arg = number;
+
 const callback = (a: number) => {
   return 100 + a;
 };
