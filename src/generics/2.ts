@@ -6,9 +6,9 @@ type AllType = {
 };
 
 function compare(
-  top: AllType,
-  bottom: AllType
-): Pick<AllType, 'color' | 'name' | 'position' | 'weight'> {
+  top: Pick<AllType, 'color' | 'name'>,
+  bottom: Pick<AllType, 'position' | 'weight'>
+): AllType {
   return {
     name: top.name,
     color: top.color,
@@ -18,8 +18,5 @@ function compare(
 }
 
 console.log(
-  compare(
-    { name: 'Anna', color: 'blue', position: 12, weight: 50 },
-    { name: 'John', color: 'red', position: 24, weight: 36 }
-  )
+  compare({ name: 'Anna', color: 'blue' }, { position: 24, weight: 36 })
 );
